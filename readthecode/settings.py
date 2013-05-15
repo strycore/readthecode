@@ -42,6 +42,7 @@ INSTALLED_APPS = (
     'djcelery',
 
     'main',
+    'codereader',
 )
 
 # Nosetests
