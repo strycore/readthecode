@@ -39,7 +39,7 @@ INSTALLED_APPS = (
 
     'compressor',
     'south',
-    'django_celery',
+    'djcelery',
 
     'main',
 )
