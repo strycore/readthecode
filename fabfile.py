@@ -11,8 +11,8 @@ RSYNC_EXCLUDE = (
     '*.pyc',
     '*.db',
     'fabfile.py',
-    'media',
-    'static'
+    './media',
+    './static'
 )
 
 env.home = '/srv/django'
@@ -172,9 +172,9 @@ def fix_perms(user="www-data"):
 @task
 @roles('web')
 def deploy():
+    fix_perms(env.user)
     rsync()
     requirements()
-    fix_perms(env.user)
     copy_local_settings()
     collectstatic()
     update_vhost()
