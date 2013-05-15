@@ -6,3 +6,6 @@ nose
 django-nose
 Celery
 django-celery
+GitPython
+Pygments
+bzr
