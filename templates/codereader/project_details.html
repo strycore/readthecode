@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{ project.name }}</h1>
+<p>{{ project.description }}</p>
+{% for repository in project.repository_set.all %}
+  <a href='{% url "repository_show" project.slug repository.id %}'>{{ repository.origin_url }}</a><br/>
+{% endfor %}
+<a href="{% url "repository_add" project.slug %}">Add repository</a>
+{% endblock %}

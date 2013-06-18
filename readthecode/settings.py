@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'compressor',
     'south',
     'djcelery',
+    'crispy_forms',
 
     'main',
     'codereader',

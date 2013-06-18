@@ -45,6 +45,9 @@ mysqlbackup:
 pylint:
 	pylint --rcfile=config/pylintrc .
 
+worker:
+	./manage.py celery worker --loglevel=debug
+
 ctags:
 	ctags -R --languages=python --python-kinds=-v ${VIRTUAL_ENV}/lib/python2.7
 	ctags -R -a --languages=python --python-kinds=-v ${VIRTUAL_ENV}/src

@@ -9,3 +9,4 @@ django-celery
 GitPython
 Pygments
 bzr
+django-crispy-forms
