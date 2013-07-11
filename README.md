@@ -1,33 +1,25 @@
-djung
-=====
+Read the code
+=============
 
-Boilerplate for Django projects
+Source code browser / search engine / collaborative tool.
 
-This boilerplate sets a standard Django project along with common components.
-These components are:
+This project uses the following technologies:
 
-- [Django Compressor](http://django_compressor.readthedocs.org/en/latest/index.html)
-- [South](http://south.aeracode.org/)
-- [Fabric](http://docs.fabfile.org)
-- [Nose](https://nose.readthedocs.org/en/latest/)
+- [codesearch](http://code.google.com/p/codesearch/)
+- [linguist (the python version)](https://github.com/liluo/linguist)
+- [angularjs for the frontend](http://angularjs.org/)
+- Django, TastyPie and Celery for the backend
 
-Some frontend components are also shipped inside the project:
-- [jQuery](http://jquery.com/)
-- [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
-- [HTML5 Boilerplate](http://html5boilerplate.com/)
 
-Reusable frontend components are installed with [bower](https://github.com/twitter/bower)
-inside the 'components' folder.
+Planned features
+----------------
 
-Basic usage
------------
-
-You can quickly create a django project using this boilerplate with django-admin:
-
-    django-admin.py startproject --template https://github.com/strycore/djung/zipball/master project_name
-
-Oneliner to create a project and push it to your staging server (assumes you
-have cloned the repository and changed the domain in fabfile.py)
-
-    mkvirtualenv -i django foo; django-admin.py startproject --template djung foo; cd foo; fab staging setup; fab staging deploy
-
+- Powerful source code browser and search engine.
+- Support for all major DVCS (git, bzr, hg)
+- A user can comment on specific lines of code
+- A user can bookmark a project, a file or a specific line in a file
+- Files and directories can be tagged
+- A dependency tree between projects can be automatically generated
+- Function names, classes, variables are hyperlinks that points to their
+  original definition, even if in another project (I believe the use of ctags
+  would be appropriate here)
